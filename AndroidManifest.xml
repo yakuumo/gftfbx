@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gearfitfreeboxtelec"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.samsung.android.sdk.permission.SAMSUNG_CUP_SERVICE"/>
+    <uses-permission android:name= 
+		"com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/gearfitfbxtelc"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.gearfitfreeboxtelec.MainActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="sensor">
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+				<action android:name="com.samsung.android.sdk.cup" />
+			</intent-filter>
+        </activity>
+        <meta-data
+			android:name="SAMSUNG_CUP_APP"
+			android:value="Fbx Remote Ctrl;ic_launcher;true" />
+    </application>
+
+
+</manifest>
